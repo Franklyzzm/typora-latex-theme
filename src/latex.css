@@ -31,21 +31,21 @@
   /* == 字体设置 == */
   /* 基准字体 */
   /* 备选：Times, "Times New Roman" */
-  --base-Latin-font: "Latin Modern Roman", "Latin Modern Roman 10", "Times New Roman";
-  --base-Chinese-font: "宋体", "宋体-繁", "宋体-简", "PMingLiU", "MingLiU", "华文宋体", "Noto Serif CJK SC";
-  --base-font-size: 12pt;
+  --base-Latin-font: "Latin Modern Roman", "Latin Modern Roman 10";
+  --base-Chinese-font: "宋体-简", "华文宋体", "Noto Serif CJK SC";
+  --base-font-size: 9.5pt;
   /* 引言字体 */
   --quote-font: "Latin Modern Roman", "Latin Modern Roman 10", Times,
-    "Times New Roman", "DFKai-SB", "MingLiU", "楷体", "楷体-繁", "楷体-简", "华文楷体";
-  /* 这里字体用了12pt,比正文字体稍大 ,引言用楷體，和正文宋體區別*/
-  --quote-font-size: 12pt;
+    "Times New Roman", "华文仿宋";
+  /* 这里字体用了10pt,比正文字体稍大 */
+  --quote-font-size: 10pt;
   /* 代码字体（代码中的中文会调用 ui-font） */
   --code-font: "Latin Modern Mono", "Latin Modern Mono 10", "Courier New";
   /* 侧边栏字体 */
-  --ui-font: "宋体", "宋体-繁", "宋体-简", "华文宋体", "阿里巴巴普惠体 2.0";
+  --ui-font: "阿里巴巴普惠体 2.0", "微软雅黑";
   /* source mode 字体 */
   /* 默认调用 code-font 和 ui-font */
-  --sourceMode-font: "SF Mono", "阿里巴巴普惠体 2.0", "华文宋体";
+  --sourceMode-font: "SF Mono", "阿里巴巴普惠体 2.0", "微软雅黑";
   /* 目录字体 */
   /* 默认调用 base-font */
   --toc-font: "";
@@ -58,31 +58,31 @@
   --table-font: "";
   /* 标题字体（总设置） */
   --heading-Latin-font: var(--base-Latin-font);
-  --heading-Chinese-font: "楷体", "楷体-繁", "楷体-简", "华文楷体";
+  --heading-Chinese-font: "华文黑体";
   /* 标题字体分别设置 */
   /* 大标题（h1）字体 */
-  --title-Chinese-font: "楷体", "楷体-繁", "楷体-简", "华文楷体";
-  --title-font-size: 22pt;
+  --title-Chinese-font: "华文黑体";
+  --title-font-size: 18pt;
   /* h2字体 */
-  --h2-Chinese-font: "楷体", "楷体-繁", "楷体-简", "华文楷体";
-  --h2-font-size: 18pt;
+  --h2-Chinese-font: "华文黑体";
+  --h2-font-size: 14pt;
   /* h3字体 */
-  --h3-Chinese-font: "楷体", "楷体-繁", "楷体-简", "华文楷体";
-  --h3-font-size: 16pt;
+  --h3-Chinese-font: "华文黑体";
+  --h3-font-size: 12pt;
   /* h4字体 */
-  --h4-Chinese-font: "楷体", "楷体-繁", "楷体-简", "华文楷体";
-  --h4-font-size: 14pt;
+  --h4-Chinese-font: "华文楷体";
+  --h4-font-size: 10pt;
   /* h5字体 */
-  --h5-Chinese-font: "宋体", "宋体-繁", "宋体-简", "华文仿宋";
-  --h5-font-size: 12pt;
+  --h5-Chinese-font: "华文仿宋";
+  --h5-font-size: 10pt;
   /* h6字体 */
-  --h6-Chinese-font: "宋体", "宋体-繁", "宋体-简", "华文仿宋";
-  --h6-font-size: 12pt;
+  --h6-Chinese-font: "华文仿宋";
+  --h6-font-size: 9.5pt;
   /* 粗体样式设置 */
   /* 加粗风格时使用的字重；400等同于 normal，700等同于 bold，900等同于 heavy */
-  --strong-weight: 700;
+  --strong-weight: 900;
   /* 基础行距 */
-  --base-line-height: 18pt;
+  --base-line-height: 16pt;
   /* == 页面设置 == */
   /* 打印页边距 */
   --set-margin: 1.8cm 2cm 1.2cm 2cm !important;
@@ -534,14 +534,6 @@ li code {
   counter-increment: outline-h5;
   content: counter(outline-h2) "." counter(outline-h3) "." counter(outline-h4) "." counter(outline-h5) "  ";
 }
-/* 侧边栏的h6不用reset */
-.sidebar-content .outline-h6 .outline-label:before {
-  counter-increment: outline-h6;
-  content: counter(outline-h2) "." counter(outline-h3) "." counter(outline-h4) "." counter(outline-h5) "." counter(outline-h6) "  ";
-}
-
-
-
 
 .sidebar-content {
   /* 侧边栏的字体修改 */
