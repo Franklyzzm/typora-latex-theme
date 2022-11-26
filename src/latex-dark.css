@@ -80,7 +80,7 @@
   --h6-font-size: 12pt;
   /* 粗体样式设置 */
   /* 加粗风格时使用的字重；400等同于 normal，700等同于 bold，900等同于 heavy */
-  --strong-weight: 700;
+  --strong-weight: 900;
   /* 基础行距 */
   --base-line-height: 18pt;
   /* == 页面设置 == */
